@@ -1,0 +1,35 @@
+{
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::458961323783:role/ecsTaskExecutionRole",
+  "memory": "1024",
+  "cpu": "512",
+  "containerDefinitions": [
+    {
+      "name": "ofp-standalone-server",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "/ecs/ofp-standalone-server",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 80
+        }
+      ]
+    }
+  ],
+  "taskRoleArn": "arn:aws:iam::458961323783:role/esc-service-task-role",
+  "family": "ofp-standalone-server",
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "volumes": []
+}
