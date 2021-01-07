@@ -8,6 +8,10 @@ Dockerize the OFP Linux Standalone Server..
 - https://community.bistudio.com/wiki/server.cfg
 - https://www.aligrant.com/web/games/ofp/misc/server
 
+From: https://forums.bohemia.net/forums/topic/23984-190f-linux-and-segmentation-fault/
+
+`The "port 2302" normally means something is not correct with your network setup, check your /etc/hosts, resolv.conf, route, ifconfig, etc.`
+
 # Docker
 docker build -t ofp-standalone-server .
 docker run -d -p 80:80 ofp-standalone-server
