@@ -13,4 +13,4 @@ docker build -t ofp-standalone-server .
 docker run -d -p 80:80 ofp-standalone-server
 
 Log into Docker container
-docker exec -ti ofp-standalone-server powershell
+docker exec -ti ofp-standalone-server powershell 
